@@ -227,7 +227,7 @@ elif st.session_state.page == "Year and Month-wise Analysis":
         year1_data = df[df['FY'] == year1]
         year2_data = df[df['FY'] == year2]
 
-        st.DataFrame(year1_data)
+        st.dataframe(year1_data)
 
 
         
