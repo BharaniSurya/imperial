@@ -228,8 +228,8 @@ elif st.session_state.page == "Year and Month-wise Analysis":
         year2_data = df[df['FY'] == year2]
         
         # Filter data for the required fields
-        year1_data= year1_data[['FY','Product_X_Volume','Product_Y_Volume']]
-        year2_data= year2_data[['FY','Product_X_Volume','Product_Y_Volume']]
+        year1_data= year1_data[['Product_X_Volume','Product_Y_Volume']]
+        year2_data= year2_data[['Product_X_Volume','Product_Y_Volume']]
         
         # Calculate mean metrics for each year
         year1_summary = year1_data.mean()
