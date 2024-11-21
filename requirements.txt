@@ -2,3 +2,6 @@ joblib
 matplotlib
 seaborn
 scikit-learn
+pandas
+openpyxl
+streamlit
