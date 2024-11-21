@@ -232,8 +232,8 @@ elif st.session_state.page == "Year and Month-wise Analysis":
         year2_data= year2_data[['Product_X_Volume','Product_Y_Volume']]
         
         # Calculate mean metrics for each year
-        year1_summary = year1_data.mean()
-        year2_summary = year2_data.mean()
+        year1_summary = year1_data.sum()
+        year2_summary = year2_data.sum()
 
         # Display the summaries
         st.subheader(f"Summary Metrics for FY{year1} and FY{year2}")
