@@ -205,8 +205,9 @@ elif st.session_state.page == "Year and Month-wise Analysis":
         # Filter data for the selected month
         month_data = df[df['Month'] == selected_month]
 
-        grouped_month_data = month_data.select_dtypes(include=['number']).groupby('FY').mean().reset_index()
+        st.dataframe(month_data)
 
+        '''
         # Group data by year for the selected month
         grouped_month_data = month_data.groupby('FY').mean().reset_index()
         
@@ -216,6 +217,7 @@ elif st.session_state.page == "Year and Month-wise Analysis":
         # Basic Streamlit line chart for trends
         st.subheader(f"Visualization of {selected_month} Data Across Years")
         st.line_chart(data=grouped_month_data.set_index('FY')[['Product_X_Volume', 'Product_Y_Volume']])
+        '''
 
     elif analysis_type == "Year-wise Analysis":
         # Dropdown to select two FYs for comparison
