@@ -34,7 +34,7 @@ df.rename(columns={
     'Counterfeit % in the market': 'Counterfeit_Percentage'
 }, inplace=True)
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Initialize session state for page navigation
 if "page" not in st.session_state:
