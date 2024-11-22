@@ -353,7 +353,7 @@ elif st.session_state.page == "Model Performance Analysis":
     image1_url = "result1.png"
     image2_url = "result2.png"
     vif1='vif1.png'
-    vif1='vif1.png'
+    vif2='vif1.png'
     
     # Display the image in the app
     st.image(image1_url, caption="Test Dataset Performance", use_column_width=True)
