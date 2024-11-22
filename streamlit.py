@@ -349,44 +349,13 @@ if st.session_state.page == "Forecasting Tool - Manual Entry":
 elif st.session_state.page == "Model Performance Analysis":
     st.title("Model Performance Analysis")
     
-    # Split data into features (X) and target (y) for Product X and Y
-    features_x = ['X_Price_Per_Unit', 'X_Consumers_Mean_Income', 'Alternative_Category_Percentage', 'Counterfeit_Percentage']
-    target_x = 'Product_X_Volume'
     
-    features_y = ['Alternative_Category_Percentage', 'Counterfeit_Percentage']
-    target_y = 'Product_Y_Volume'
-
-    X_x = df[features_x]
-    y_x = df[target_x]
-
-    X_y = df[features_y]
-    y_y = df[target_y]
+    image1_url = "https://github.com/BharaniSurya/imperial/blob/main/result1.png"
+    image2_url = "https://github.com/BharaniSurya/imperial/blob/main/result2.png"
     
-    # Predict on the dataset using pre-trained models
-    y_x_pred = model_x.predict(X_x)
-    y_y_pred = model_y.predict(X_y)
-
-    # Function to calculate metrics
-    from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error, r2_score
-    def calculate_metrics(y_true, y_pred):
-        rmse = np.sqrt(mean_squared_error(y_true, y_pred))
-        mape = mean_absolute_percentage_error(y_true, y_pred) * 100
-        r2 = r2_score(y_true, y_pred)
-        return rmse, mape, r2
-
-    # Calculate metrics for Product X and Y
-    rmse_x, mape_x, r2_x = calculate_metrics(y_x, y_x_pred)
-    rmse_y, mape_y, r2_y = calculate_metrics(y_y, y_y_pred)
-
-    # Display metrics in Streamlit
-    st.subheader("Performance Metrics")
-    performance_metrics = pd.DataFrame({
-        "Product": ["Product X", "Product Y"],
-        "RMSE": [rmse_x, rmse_y],
-        "MAPE (%)": [mape_x, mape_y],
-        "R²": [r2_x, r2_y]
-    })
-    st.dataframe(performance_metrics)
+    # Display the image in the app
+    st.image(image1_url, caption="Test Dataset Performance", use_column_width=True)
+    st.image(image2_url, caption="Test Dataset Performance", use_column_width=True)
 
     # Calculate Variance Inflation Factor (VIF) for Product X
     from statsmodels.stats.outliers_influence import variance_inflation_factor
