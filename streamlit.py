@@ -357,17 +357,6 @@ elif st.session_state.page == "Model Performance Analysis":
     st.image(image1_url, caption="Test Dataset Performance", use_column_width=True)
     st.image(image2_url, caption="Test Dataset Performance", use_column_width=True)
 
-    # Calculate Variance Inflation Factor (VIF) for Product X
-    from statsmodels.stats.outliers_influence import variance_inflation_factor
-    def calculate_vif(X):
-        vif_data = pd.DataFrame()
-        vif_data["Feature"] = X.columns
-        vif_data["VIF"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
-        return vif_data
-
-    st.subheader("Variance Inflation Factor (VIF) for Product X Features")
-    vif_x = calculate_vif(X_x)
-    st.dataframe(vif_x)
 
     # Provide interpretation of metrics and VIF
     st.subheader("Interpretation")
