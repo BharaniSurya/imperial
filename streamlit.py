@@ -372,9 +372,10 @@ elif st.session_state.page == "Model Performance Analysis":
     - **R²**: Higher values (close to 1) indicate a better model fit.
     - **VIF**: High VIF values (>10) indicate multicollinearity and potential overfitting in the model. Features with high VIF may need to be removed or transformed.
     """)
+
+    st.subheader("Bias-Variance Tradeoff")
     st.write("""
-    Bias-Variance Tradeoff:
-        - Bias: The models exhibit very high 𝑅2  values (close to 1) on both the training and testing sets, indicating that the models are making highly accurate predictions. This suggests low bias.
-        - Variance: The difference between the training and testing RMSE/metrics is relatively small, meaning the models are generalizing well and not overly sensitive to the training data. This suggests low variance.
+    - Bias: The models exhibit very high 𝑅2  values (close to 1) on both the training and testing sets, indicating that the models are making highly accurate predictions. This suggests low bias.
+    - Variance: The difference between the training and testing RMSE/metrics is relatively small, meaning the models are generalizing well and not overly sensitive to the training data. This suggests low variance.
     """)
 
