@@ -350,8 +350,8 @@ elif st.session_state.page == "Model Performance Analysis":
     st.title("Model Performance Analysis")
     
     
-    image1_url = "https://github.com/BharaniSurya/imperial/blob/main/result1.png"
-    image2_url = "https://github.com/BharaniSurya/imperial/blob/main/result2.png"
+    image1_url = "result1.png"
+    image2_url = "result2.png"
     
     # Display the image in the app
     st.image(image1_url, caption="Test Dataset Performance", use_column_width=True)
