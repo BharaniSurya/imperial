@@ -270,12 +270,16 @@ if st.session_state.page == "Forecasting Tool - Manual Entry":
     # Create initial input DataFrame
     input_data = pd.DataFrame({
         "Datetime": [last_date + pd.DateOffset(months=i) for i in range(1, 13)],
-        "X_Price_Per_Unit": [latest_values['X_Price_Per_Unit']] * 12,
-        "Y_Price_Per_Unit": [latest_values['Y_Price_Per_Unit']] * 12,
+        "X_Price_Per_Unit": [1.76939261, 1.77386188, 1.77705795, 1.77614843, 1.77687087,
+        1.79257038, 1.79792375, 1.79763792, 1.79750149, 1.79639777,1.80003852, 1.85025737],
+        "Y_Price_Per_Unit": [2.63241849, 2.64750791, 2.66673132, 2.67820439, 2.69007945,
+        2.72134706, 2.74034968, 2.75294943, 2.76750176, 2.78083697,2.79676291, 2.90503565],
         "X_Consumers_Mean_Income": [latest_values['X_Consumers_Mean_Income']] * 12,
         "Y_Consumers_Mean_Income": [latest_values['Y_Consumers_Mean_Income']] * 12,
-        "Alternative_Category_Percentage": [latest_values['Alternative_Category_Percentage']] * 12,
-        "Counterfeit_Percentage": [latest_values['Counterfeit_Percentage']] * 12,
+        "Alternative_Category_Percentage": [0.45335567, 0.46564854, 0.46207008, 0.46462206, 0.48198054,
+        0.48748704, 0.48203387, 0.48359557, 0.48952876, 0.48499432,0.49086799, 0.48861747],
+        "Counterfeit_Percentage": [0.36502111, 0.3611247 , 0.35668494, 0.35219111, 0.35606494,
+        0.35756808, 0.36429877, 0.36633718, 0.37169728, 0.37228948,0.36723531, 0.35805375]
     })
 
     # Allow users to edit the DataFrame
